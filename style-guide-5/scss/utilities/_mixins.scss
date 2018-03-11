@@ -1,0 +1,106 @@
+// Mixins
+
+// Generate modifier color classes
+
+@mixin ui-colors($map) {
+@each $theme, $color in $map {
+	&.btn--#{$theme} {
+	background-color: $color;
+}
+}
+}
+
+@mixin grid-colors($map) {
+  @each $theme, $color in $map {
+    &.grid__#{$theme} {
+      background-color: $color;
+    }
+  }
+}
+// Bem selectors
+
+@mixin e($element) {
+	&__#{$element} {
+	 @content;
+	}
+}
+
+@mixin m($modifier) {
+	&--#{$modifier} {
+	 @content;
+	}
+}
+
+// Media Queries
+
+@mixin mq($break) {
+	@if $break == "medium" {
+		@media (max-width: $brkpoint-md) {
+			@content;
+		}
+	}
+    @else if $break == "large" {
+    	@media (min-width: $brkpoint-md + 1) {
+    		@content;
+    	}
+    }
+    @else {
+    	@error "Whoops! No value could be retrieved for '#{$break}'."
+    }
+}
+
+//Flex settings
+
+@mixin flex {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+}
+
+// Flex Direction: row/row-reverse/column/column-reverse
+
+@mixin flex-direction($direction) {
+  -webkit-flex-direction: $direction;
+  -moz-flex-direction: $direction;
+  -ms-flex-direction: $direction;
+  flex-direction: $direction;
+}
+
+//flex-start/flex-end/center/space-between/space-around
+
+@mixin justify-content($justify) {
+  -webkit-justify-content: $justify;
+  -moz-justify-content: $justify;
+  -ms-justify-content: $justify;
+  justify-content: $justify;
+ -ms-flex-pack: $justify;
+}
+
+//applies to flex containers
+@mixin align-items($align) {
+  align-items: $align;
+}
+
+//applies to flex items
+@mixin align-self($align) {
+  	align-self: $align;
+  }
+
+@mixin flex-basis($width: $g-col-width) {
+  flex-basis: $width;
+}
+
+// Flex grid columns
+
+@mixin g-width {
+  @for $i from 1 through $g-col-count {
+    &--#{$i}{
+
+      flex-basis:percentage(($g-col-width * $i)/100);
+      //flex-basis: $g-col-basis;
+      //@include flex-grow(#{$i});
+    }
+  }
+}

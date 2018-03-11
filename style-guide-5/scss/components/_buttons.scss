@@ -1,0 +1,39 @@
+// ===============================================================
+// Buttons
+// ===============================================================
+
+.theme__colors {
+	font-weight: $font-weight--bold;
+	color: $black;
+	text-align: center;
+	font-size: em(18px);
+	@include grid-colors($grid-colors);
+	@include ui-colors($ui-colors);
+}
+
+[class^="btn--"] {
+	@extend %btn;
+    margin: em(14px);
+    width: 100%;
+}
+
+#buttons {
+    visibility: hidden;
+    @include mq(large) {
+    	visibility: visible;
+    	margin-left: 35px;
+    }
+}
+
+.form {
+
+	.btn--default {
+		margin-left: auto;
+		@include mq(large) {
+			width: 45%;
+			margin: auto;
+			
+			
+		}
+	}
+}

@@ -1,0 +1,26 @@
+// Forms
+
+.form {
+	@include flex;
+	@include flex-direction(column);
+	@include align-items(stretch);
+	width: 100%;
+	@include e(label) {
+		@include m(hidden) {
+			display: none;
+		}
+		display: block;
+		margin-bottom: em(10px);
+
+    }
+    @include e(input) {
+    	font-size: em(16px);
+    	margin: em(16px, 18px);
+    	padding: em(14px);
+    	border: none;
+    	border-bottom: 8px solid $millenialpink;
+    
+    
+    }
+}
+

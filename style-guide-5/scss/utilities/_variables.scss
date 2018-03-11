@@ -1,0 +1,112 @@
+// Variables //
+
+// Font Stacks
+
+$font-url--google       : 'http://fonts.googleapis.com/css?family=Lato:100,300,400,700,900';
+$font-family--primary   : 'Lato', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+$font-family--secondary : 'Helvetica Neue', Helvetica, Arial, sans-serif;
+$font-family--nav       : 'Librebaskerville', sans-serif;
+
+// Font Weights
+
+$font-weight--thin       : 100;
+$font-weight--light      : 300;
+$font-weight--medium     : 400;
+$font-weight--bold       : 700;
+$font-weight--ultra-bold : 900;
+
+// Descriptive Base Colors
+
+$white : #fff;
+$black : #0b0b0b;
+$grey  : #808080;
+
+// Colors
+
+$bluesage: #afd8d5;
+$pinkpink: #f25e5e;
+$richgreen: #336435;
+$richblue: #0000e5;
+$millenialpink: #eddee1;
+$turquoise: #55ddee;
+$retrogreen: #55eec4;
+$mauve: #8e1662;
+
+// Color Usage
+
+$color-primary   : $turquoise;
+$color-secondary : $retrogreen;
+
+//UI Colors
+
+$ui-colors: (
+	default: $millenialpink,
+	success: $bluesage,
+	error: $pinkpink,
+	warning: $richgreen,
+	info: $mauve,
+ );
+
+//Grid colors
+
+$lavarock            : #a07298;
+$lansburypink        : #ffc1c1;
+$verygray            : #eee9e9;
+$veryblue            : #40a6e1;
+$fuschia             : #d02090;
+$flesh               : #e5c9ad;
+$sagegreen           : #989f7a;
+
+$grid-colors: (
+        col--3    : $fuschia,
+        col--4    : $flesh,
+        col--5    : $verygray,
+        col--6    : $veryblue,
+        col--7    : $lansburypink,
+        col--8    : $lavarock,
+        col--12   : $sagegreen,
+);
+
+//Color Palette Modifiers
+
+$color-palettes: (
+	grey: (
+		xx-light : lighten($grey, 43%),
+		x-light  : lighten($grey, 35%),
+		light    : lighten($grey, 12%),
+		base     : $grey,
+		dark     : darken($grey, 8%),
+		x-dark   : darken($grey, 16%)
+	),
+	black: (
+		light : lighten($black, 10%),
+		base  : $black,
+		dark  : darken($black, 10%)
+    )
+   );
+
+// Text
+
+$base__font-size : 16px;
+$base__line      : 24px;
+$letter-space    :  1px;
+ 
+// Border radius
+
+$br--default : 0.4em;
+
+// Transitions
+$trns-duration : .3s;
+
+// Grid
+
+$g-col-width     : 8.265;
+$g-gutter-weight : 20px;
+$g-col-count     : 12; 
+$g-cont-max-w    : 1050px;
+
+// Breakpoints
+
+$brkpoint-sm :   1px; 
+$brkpoint-md  : 768px;
+$brkpoint-lg  : 1100px;

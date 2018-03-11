@@ -1,0 +1,88 @@
+// Containers
+
+.container {
+	@extend %clearfix;
+	margin: auto;
+	width: 90%;
+	
+	
+    .grid {
+	@include e(row) {
+    @include flex;
+	@include flex-direction(column);
+	@include align-items(center);
+	padding: em(20px);
+	
+	@include mq(large) {
+    @include flex-direction(row);
+	@include justify-content(space-between);
+}
+  }
+    @include e(col) {
+  	@include g-width;
+  }
+}
+
+// Column styles
+
+[class^="grid__col--"] {
+		
+		margin: em(5px);
+		padding: em(5px);
+		@include flex;
+		@include align-items(center);
+		@include align-self(stretch);
+		@include flex-direction(column);
+		width: 100%;
+	
+        @include mq(large) {
+        margin: auto em(5px);
+    	border-radius: 10px;
+    	
+    }
+}
+}
+
+.centered.grid__col--7 {
+	@include mq(medium) {
+		margin-left: em(5px);
+	}
+	width: 100%;
+	margin: auto;
+	@include mq(large) {
+	}
+	}
+
+
+
+.grid__row--12 {
+  @include flex;
+  @include flex-direction(column);
+  @include align-items(center);
+  padding: em(20px);
+  @include mq(large) {
+    @include flex-direction(row);
+    @include justify-content(space-between);
+    width: 85%;
+}
+}
+
+.grid__row--12 .grid__col--12 {
+	@include mq(large) {
+     @include flex-direction(row);
+
+	}
+}
+
+// Center elements
+
+.centered {
+	@extend %centered;
+}
+
+#grid {
+	margin-left: 20px;
+	@include mq(large) {
+		visibility: hidden;
+	}
+}

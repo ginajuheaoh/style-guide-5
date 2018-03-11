@@ -1,0 +1,92 @@
+// =================================================================
+// Placeholders
+// ===================================================================
+
+// Clearfix
+
+%clearfix {
+  &:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+}
+
+// Buttons
+
+%btn {
+	padding: 7px 30px;
+	border: 0;
+	border-radius: $br--default;
+	color: $white;
+	font-weight: $font-weight--medium;
+	transition: opacity $trns-duration;
+	/*display: inline-block;*/
+	&:hover {
+		opacity: .75;
+	}
+	&:active {
+		opacity: initial;
+	}
+}
+
+// Nav Items
+
+%nav__item {
+	display: block;
+	padding: .7em;
+	text-align: center;
+}
+
+// Typography
+
+%headline--primary {
+	font-weight: $font-weight--bold;
+	font-size: em(16px);
+	line-height: (46px / 42px);
+	color: $black;
+	margin: 0 0 30px 0;
+	padding-left: 55px;
+	padding-right: 20px;
+}
+
+%headline--secondary {
+	font-family: $font-family--secondary;
+	font-weight: $font-weight--light;
+	color: palette(grey, light);
+	margin: 0;
+	letter-spacing: $letter-space;
+}
+
+%link {
+	color: $richblue;
+	text-decoration: none;
+	font-weight: $font-weight--medium;
+}
+
+// Hide
+
+%hidden {
+	border: 0;
+	clip: rect(0,0,0,0);
+	height: 1px;
+	margin: -1px;
+	overflow: hidden;
+	padding: 0;
+	position: absolute;
+	width: 1px;
+}
+
+%centered {
+	text-align: center;
+	margin: auto;
+}
+
+// Images
+
+%image {
+	display: block;
+	margin-right: auto;
+	margin-left: auto;
+	max-width: 100%;
+}

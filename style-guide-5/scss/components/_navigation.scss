@@ -1,0 +1,54 @@
+// ==========================================================================
+// Nav
+// ==========================================================================
+
+.nav {
+    margin-top: em(10px);
+    padding-top: em(10px);
+	@include flex;
+	@include flex-direction(column);
+    @include mq(large) {
+        
+        @include flex-direction(row);
+        width: 1100px;
+        @include justify-content(flex-end);
+}
+    
+    &__item {
+        
+    	@extend %nav__item;
+        & a {
+
+    		color: $black;
+            font-family: $font-family--nav;
+    		font-weight: $font-weight--bold;
+            font-size: em(20px);
+    		padding: 7px 20px;
+            letter-spacing: $letter-space;
+    		border-radius: $br--default;
+    		text-decoration: none;
+            @include mq(large) {
+                font-size: em(18px);
+
+            }
+    		&:hover {
+    			background-color: palette(grey, x-light);
+    			color: $white;
+    			font-weight: $font-weight--medium;
+
+    		}
+    	}
+    }
+ }
+
+ .grid__col--9 {
+    @include mq(large) {
+        margin-right: 0;
+    }
+ }
+
+ .link {
+ 	@extend %link;
+ }
+
+

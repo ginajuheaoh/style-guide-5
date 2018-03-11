@@ -1,0 +1,48 @@
+// Typography
+
+
+.container {
+	line-height: ($base__line/$base__font-size);
+	font-size: $base__font-size;
+	font-family: $font-family--primary;
+	font-weight: $font-weight__light;
+	color: $black;
+}
+
+.link {
+	@extend %link;
+}
+
+.headline--primary {
+	@extend %headline--primary;
+	@include mq(large) {
+		padding-left: 0;
+	}
+}
+
+.headline--secondary {
+   @extend %headline--secondary;
+   font-family: $font-family--nav;
+   font-weight: $font-weight--medium;
+   font-size: em(18px);
+   margin-bottom: em(22px, 24px);
+
+   @include mq(large) {
+		font-size: em(21px);
+}
+}	
+
+blockquote {
+	font-size: em(20px);
+    font-weight: $font-weight--bold;
+	color: $black;
+	margin: 35px auto;
+	border-left: 14px solid $millenialpink;
+    letter-spacing: $letter-space;
+	padding-left: 10px;
+	@include mq(large) {
+		font-size: em(18px);
+		width: 60%;
+		float: left;
+	}
+}

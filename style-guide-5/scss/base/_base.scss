@@ -1,0 +1,29 @@
+ * {
+	box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	}
+
+p {
+	margin: 0 0 em(1px, 18px);
+	font-weight: $font-weight--light;
+	font-family: $font-family--primary; 
+	line-height: (27px/18px);
+	font-size: em(18px);
+	@include mq(large) {
+		width: 85%;
+		font-size: em(22px);
+ }
+}
+
+img {
+	margin-bottom: em(20px);
+	max-width: 100%;
+	height: auto;
+}
+
+ul,
+li {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
